@@ -57,8 +57,8 @@ const INITIAL_BAY_CONFIGS: BayConfig[] = [
     top: 52.0,
     width: 13.0,
     zoomScale: 2.65,
-    productImg: '/assets/product-tag.png',
-    morphImg: '/assets/morph-tag.png',
+    productImg: './assets/product-tag.png',
+    morphImg: './assets/morph-tag.png',
     animationType: 'pendulum',
     eyebrow: 'BAY 01 // SECURE — ARCHIVE EDITION',
     title: 'The "Bare Fare" Tag',
@@ -84,8 +84,8 @@ const INITIAL_BAY_CONFIGS: BayConfig[] = [
     top: 52.5,
     width: 11.5,
     zoomScale: 2.65,
-    productImg: '/assets/product-vessel.png',
-    morphImg: '/assets/morph-vessel.png',
+    productImg: './assets/product-vessel.png',
+    morphImg: './assets/morph-vessel.png',
     animationType: 'pedestal',
     eyebrow: 'BAY 02 // TSA 100ML — LIQUID HARDWARE',
     title: 'The "Personal Item" Vessel',
@@ -111,8 +111,8 @@ const INITIAL_BAY_CONFIGS: BayConfig[] = [
     top: 57.0,
     width: 15.5,
     zoomScale: 2.65,
-    productImg: '/assets/product-wallet.png',
-    morphImg: '/assets/morph-wallet.png',
+    productImg: './assets/product-wallet.png',
+    morphImg: './assets/morph-wallet.png',
     animationType: 'hover-bob',
     eyebrow: 'BAY 03 // ZONE 4 — BOARDING LAST',
     title: 'The "Zone 4" Wallet',
@@ -470,7 +470,7 @@ export default function App() {
         >
           {/* Facility 16:9 Architectural Backdrop */}
           <img
-            src="/assets/bg-facility.jpg"
+            src="./assets/bg-facility.jpg"
             alt="The Yellow Tag 3-Bay Hardware Testing Facility"
             draggable={false}
             className="w-full h-full object-cover pointer-events-none select-none"
@@ -970,7 +970,7 @@ export default function App() {
               <div className="relative bg-[#E5E7EB]/65 border-b border-[#141517]/15 px-6 pt-5 pb-4 flex items-center gap-5">
                 <div className="w-20 h-24 flex-shrink-0 bg-[#F6F6F4] border border-[#141517]/15 p-1.5 flex items-center justify-center shadow-inner">
                   <img
-                    src="/assets/mascot-solo.png"
+                    src="./assets/mascot-solo.png"
                     alt="Exhausted Baggage Handler Mascot"
                     className="h-full w-auto object-contain"
                   />
@@ -1126,7 +1126,7 @@ export default function App() {
                     FIG 00 // HANDLER IN RESIDENCE
                   </span>
                   <img
-                    src="/assets/mascot-solo.png"
+                    src="./assets/mascot-solo.png"
                     alt="Weary Banana Baggage Handler Mascot"
                     className="h-40 sm:h-44 w-auto object-contain drop-shadow-xl"
                   />
