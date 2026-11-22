@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #root {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #E5E7EB;
+    color: #141517;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+/* Kodak Ektar 100 subtle analog film grain overlay (opacity: 0.03, pointer-events: none) */
+.film-grain-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Boarding pass perforated divider */
+.perforated-divider {
+  background-image: linear-gradient(to right, rgba(20, 21, 23, 0.28) 50%, rgba(255, 255, 255, 0) 0%);
+  background-position: bottom;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+}
+
+/* Thermal receipt sawtooth edge */
+.receipt-zig-top {
+  background: linear-gradient(-45deg, #F6F6F4 6px, transparent 0),
+              linear-gradient(45deg, #F6F6F4 6px, transparent 0);
+  background-repeat: repeat-x;
+  background-size: 12px 12px;
+}
+
+.receipt-zig-bottom {
+  background: linear-gradient(-135deg, #F6F6F4 6px, transparent 0),
+              linear-gradient(135deg, #F6F6F4 6px, transparent 0);
+  background-repeat: repeat-x;
+  background-size: 12px 12px;
+}
+
+/* Custom subtle scrollbars for inspection panel */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(20, 21, 23, 0.2);
+}
